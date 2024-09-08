@@ -1,4 +1,4 @@
-package org.example;
+package game;
 import java.util.Scanner;
 
 public class Main {

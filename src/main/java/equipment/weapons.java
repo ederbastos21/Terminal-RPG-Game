@@ -1,4 +1,4 @@
-package org.example;
+package equipment;
 
 public class weapons {
     String name;
@@ -15,6 +15,7 @@ public class weapons {
         value = this.value;
     }
 
+    //List of Swords
     weapons TrainingSword = new weapons("Training Sword", 1, 1, 1, 5);
     weapons RustySword = new weapons("Rusty Sword", 5, 3, 3, 15);
     weapons SteelSword = new weapons("Steel Sword", 15, 5, 5, 40);
