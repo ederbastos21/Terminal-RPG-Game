@@ -15,10 +15,10 @@ public class weapons {
         value = this.value;
     }
 
-    weapons TrainingSword = new weapons("wooden Sword", 1, 1, 1, 5);
-    weapons RustySword = new weapons("wooden Sword", 5, 3, 3, 15);
-    weapons SteelSword = new weapons("wooden Sword", 15, 5, 5, 40);
-    weapons TitaniumSword = new weapons("wooden Sword", 30, 8, 8, 150);
-    weapons EnchantedSword = new weapons("wooden Sword", 60, 4, 4, 800);
+    weapons TrainingSword = new weapons("Training Sword", 1, 1, 1, 5);
+    weapons RustySword = new weapons("Rusty Sword", 5, 3, 3, 15);
+    weapons SteelSword = new weapons("Steel Sword", 15, 5, 5, 40);
+    weapons TitaniumSword = new weapons("Titanium Sword", 30, 8, 8, 150);
+    weapons EnchantedSword = new weapons("Enchanted Sword", 60, 4, 4, 800);
 
 }
