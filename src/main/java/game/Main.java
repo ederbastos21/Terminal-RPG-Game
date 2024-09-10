@@ -1,8 +1,6 @@
 package game;
 import equipment.weapons;
 import equipment.armors;
-import character.inventory;
-import character.status;
 import character.character;
 
 import java.util.Scanner;
@@ -14,7 +12,7 @@ public class Main {
         Scanner scanner = new Scanner (System.in);
 
         //Create object
-        inventory myInventory = new inventory ();
+        character myCharacter = new character("name", 1, 1, 1, 1, 1, 1, 1);
 
         //Declare variables
         String characterName;
@@ -23,12 +21,11 @@ public class Main {
         //Obtain Character name
         System.out.println("What's the name of your character? ");
         characterName = scanner.next();
-        System.out.println("Your character's name is: "+ characterName);
         System.out.println("Type status to check your character's status");
         action = scanner.next();
 
         if (action.equals("status")){
-            status.showStatus();
+            myCharacter.showStatus();
         }
     }
 }
