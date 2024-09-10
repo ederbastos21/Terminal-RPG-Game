@@ -30,18 +30,19 @@ public class character {
         this.heldArmor = armors.basicClothing;
     }
 
-    public static status basicCharacter = new status ("name", 10, 1, 1, 1, 1, 1, 1);
-
-    public void showStatus (){
-        System.out.printf("Name: %s \n Health: %d \n Strength %d \n Dexterity %d \n Constitution %d \n Intelligence %d \n Charisma: %d \n Experience: %d \n",
-                basicCharacter.name,
-                basicCharacter.health,
-                basicCharacter.strength,
-                basicCharacter.dexterity,
-                basicCharacter.constitution,
-                basicCharacter.intelligence,
-                basicCharacter.charisma,
-                basicCharacter.experience
+    public void showStatus() {
+        System.out.printf(
+                "Name: %s \nHealth: %d \nStrength: %d \nDexterity: %d \nConstitution: %d \nIntelligence: %d \nCharisma: %d \nExperience: %d \nCurrent Weapon: %s \nCurrent Armor: %s\n",
+                this.name,
+                this.health,
+                this.strength,
+                this.dexterity,
+                this.constitution,
+                this.intelligence,
+                this.charisma,
+                this.experience,
+                this.heldWeapon.getClass().getSimpleName(),  // Display weapon name
+                this.heldArmor.getClass().getSimpleName()    // Display armor name
         );
     }
 
