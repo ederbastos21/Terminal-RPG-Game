@@ -16,7 +16,6 @@ public class weapons {
         this.value = value;
     }
 
-
     //List of Swords
     public static weapons TrainingSword = new weapons("Training Sword", 1, 1, 1, 5);
     public static weapons RustySword = new weapons("Rusty Sword", 5, 3, 3, 15);
