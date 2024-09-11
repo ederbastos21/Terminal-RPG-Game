@@ -27,5 +27,6 @@ public class Main {
         if (action.equals("status")){
             myCharacter.showStatus();
         }
+        System.out.println(myCharacter.dealDamage());
     }
 }

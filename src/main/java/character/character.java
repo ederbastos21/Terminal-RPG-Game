@@ -61,4 +61,9 @@ public class character {
     public armors getHeldArmor () {
         return heldArmor;
     }
+
+    //Actions
+    public int dealDamage(){
+        return (this.heldWeapon.getDamage());
+    }
 }
