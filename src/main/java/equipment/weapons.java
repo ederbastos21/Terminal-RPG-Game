@@ -16,6 +16,23 @@ public class weapons {
         this.value = value;
     }
 
+    //Getters
+    public String getName () {
+        return name;
+    }
+    public int getDamage () {
+        return damage;
+    }
+    public int getWeight () {
+        return weight;
+    }
+    public int getStrength () {
+        return strength;
+    }
+    public int getValue () {
+        return value;
+    }
+
     //List of Swords
     public static weapons TrainingSword = new weapons("Training Sword", 1, 1, 1, 5);
     public static weapons RustySword = new weapons("Rusty Sword", 5, 3, 3, 15);

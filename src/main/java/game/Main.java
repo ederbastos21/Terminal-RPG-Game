@@ -19,9 +19,9 @@ public class Main {
         String action;
 
         //Obtain Character name
-        System.out.println("What's the name of your character? ");
+        System.out.print("What's the name of your character? ");
         characterName = scanner.next();
-        System.out.println("Type status to check your character's status");
+        System.out.print("Type status to check your character's status: ");
         action = scanner.next();
 
         if (action.equals("status")){

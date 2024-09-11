@@ -16,7 +16,7 @@ public class character {
     weapons heldWeapon;
     armors heldArmor;
 
-    //Constructor
+    //Character constructor
     public character (String name, int health, int strength, int dexterity, int constitution, int intelligence, int charisma, int experience) {
         this.name = name;
         this.health = health;
@@ -41,8 +41,8 @@ public class character {
                 this.intelligence,
                 this.charisma,
                 this.experience,
-                this.heldWeapon.getClass().getSimpleName(),  // Display weapon name
-                this.heldArmor.getClass().getSimpleName()    // Display armor name
+                this.heldWeapon.getName(),  // Display weapon name
+                this.heldArmor.getName()    // Display armor name
         );
     }
 
