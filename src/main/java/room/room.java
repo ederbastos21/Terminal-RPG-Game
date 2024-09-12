@@ -55,16 +55,21 @@ public class room {
         this.isDark = isDark;
     }
 
-    public static room createRoom(String name, boolean hasEnemy, boolean hasLoot, boolean isLit, boolean isDark){
-        name = "room";
-        hasEnemy = random.nextBoolean();
-        hasLoot = random.nextBoolean();
-        isLit = random.nextBoolean();
-        if (!isLit){
-        isDark = random.nextBoolean();
-        }
+    public static room createRandomRoom(String name){
+        boolean hasEnemy = random.nextBoolean();
+        boolean hasLoot = random.nextBoolean();
+        boolean isLit = random.nextBoolean();
+        boolean isDark = !isLit && random.nextBoolean();
+        return new room (name, hasEnemy, hasLoot, isLit, isDark);
+    }
 
-        return new room ("0", hasEnemy, hasLoot, isLit, isDark);
+    @Override
+    public String toString(){
+        return "Room: " + name +
+                "\nHas Enemy: " + hasEnemy +
+                "\nHas Loot: " + hasLoot +
+                "\nIs Lit: " + isLit +
+                "\nIs Dark: " + isDark;
     }
 
 }
