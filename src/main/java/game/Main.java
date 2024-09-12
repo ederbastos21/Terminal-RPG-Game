@@ -1,27 +1,25 @@
 package game;
-import equipment.weapons;
-import equipment.armors;
+import room.room;
 import character.character;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        //Create scanner
+        //Create scanner and random
         Scanner scanner = new Scanner (System.in);
+        Random random = new Random();
 
-        //Create objects
+        //Create character object
         character myCharacter = new character("", 1, 1, 1, 1, 1, 1, 1);
 
         //Declare variables
-        String characterName;
         String action;
 
-        //First Message the player gets
+        //Get character name
         System.out.print("Welcome to the game. Please type the name of your character: ");
         while (true) {
-            characterName = scanner.next();
+            String characterName = scanner.next();
             if (characterName.matches("[a-zA-Z]+")){
                 myCharacter.setName(characterName);
                 break;
@@ -32,13 +30,24 @@ public class Main {
 
         System.out.println("At any point, if you want to check the commands, type /commands.");
 
+        // Create random rooms (between 1 and 3)
+        room [] rooms = new room[random.nextInt(3)+1];
+        for (int i=0; i<rooms.length; i++){
+            rooms[i] = room.createRandomRoom("Room"+(i));
+        }
+
+        //Main game loop
         while (true) {
             action = scanner.next();
             if (action.equalsIgnoreCase("/commands")) {
-                System.out.printf("LIST OF COMMANDS: \n status - Shows character's status \n");
+                System.out.print("LIST OF COMMANDS: \n status - Shows character's status \n");
             } else if (action.equalsIgnoreCase("status")){
                 myCharacter.showStatus();
-            } else{
+            } else if (action.equalsIgnoreCase("showRooms")){
+                for (room room : rooms){
+                    System.out.println(room);
+                }
+            } else {
                 System.out.println("Command not recognized. Type /commands to check all available commands");
             }
         }
