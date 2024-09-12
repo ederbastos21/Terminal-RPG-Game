@@ -4,7 +4,8 @@ import equipment.armors;
 import equipment.weapons;
 
 public class character {
-    //Variables
+
+    //Attributes
     private String name;
     private int health;
     private int strength;
@@ -16,7 +17,7 @@ public class character {
     private weapons heldWeapon;
     private armors heldArmor;
 
-    //Character constructor
+    //Constructor
     public character (String name, int health, int strength, int dexterity, int constitution, int intelligence, int charisma, int experience) {
         this.name = name;
         this.health = health;
@@ -30,6 +31,7 @@ public class character {
         this.heldArmor = armors.basicClothing;
     }
 
+    //Display character status
     public void showStatus() {
         System.out.printf(
                 "Name: %s \nHealth: %d \nStrength: %d \nDexterity: %d \nConstitution: %d \nIntelligence: %d \nCharisma: %d \nExperience: %d \nCurrent Weapon: %s \nCurrent Armor: %s\n",
@@ -103,12 +105,14 @@ public class character {
         this.experience = experience;
     }
 
-    //Methods to equip weapons and armors
+    //Equip weapons and armors
     public void equipWeapon(weapons newWeapon){
         this.heldWeapon = newWeapon;
+        System.out.println("Equipped weapon: " + newWeapon.getName());
     }
     public void equipArmor (armors newArmor){
         this.heldArmor = newArmor;
+        System.out.println("Equipped armor: " + newArmor.getName());
     }
 
     //Access current held weapon and armor
