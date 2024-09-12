@@ -5,16 +5,16 @@ import equipment.weapons;
 
 public class character {
     //Variables
-    String name;
-    int health;
-    int strength;
-    int dexterity;
-    int constitution;
-    int intelligence;
-    int charisma;
-    int experience;
-    weapons heldWeapon;
-    armors heldArmor;
+    private String name;
+    private int health;
+    private int strength;
+    private int dexterity;
+    private int constitution;
+    private int intelligence;
+    private int charisma;
+    private int experience;
+    private weapons heldWeapon;
+    private armors heldArmor;
 
     //Character constructor
     public character (String name, int health, int strength, int dexterity, int constitution, int intelligence, int charisma, int experience) {
@@ -44,6 +44,63 @@ public class character {
                 this.heldWeapon.getName(),  // Display weapon name
                 this.heldArmor.getName()    // Display armor name
         );
+    }
+
+    //Getters and Setters
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getHealth(){
+        return health;
+    }
+    public void setHealth(int health){
+        this.health = health;
+    }
+
+    public int getStrength(){
+        return strength;
+    }
+    public void setStrength(int strength){
+        this.strength = strength;
+    }
+
+    public int getDexterity(){
+        return dexterity;
+    }
+    public void setDexterity(int dexterity){
+        this.dexterity = dexterity;
+    }
+
+    public int getConstitution(){
+        return constitution;
+    }
+    public void setConstitution(int constitution){
+        this.constitution = constitution;
+    }
+
+    public int getIntelligence(){
+        return intelligence;
+    }
+    public void setIntelligence(int intelligence){
+        this.intelligence = intelligence;
+    }
+
+    public int getCharisma(){
+        return charisma;
+    }
+    public void setCharisma(int charisma){
+        this.charisma = charisma;
+    }
+
+    public int getExperience(){
+        return experience;
+    }
+    public void setExperience(int experience){
+        this.experience = experience;
     }
 
     //Methods to equip weapons and armors
