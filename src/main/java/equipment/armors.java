@@ -1,13 +1,14 @@
 package equipment;
 
 public class armors {
+    //Parameters
     String name;
     int defense;
     int weight;
     int strength;
     int value;
 
-    //constructor
+    //Constructor
     public armors(String name, int defense, int weight, int strength, int value){
         this.name = name;
         this.defense = defense;
@@ -33,7 +34,7 @@ public class armors {
         return value;
     }
 
-    //List of Swords
+    //List of available armors
     public static armors basicClothing = new armors("Basic Clothing", 1, 1, 1, 5);
     public static armors leatherArmor = new armors("Leather Armor", 5, 3, 3, 15);
     public static armors ironArmor = new armors("Iron Armor", 15, 5, 5, 40);
