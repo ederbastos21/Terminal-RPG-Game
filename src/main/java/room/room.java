@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class room {
     //create randomizer
-    Random random = new Random();
+    static Random random = new Random();
     String name;
     boolean hasEnemy;
     boolean hasLoot;
@@ -55,7 +55,7 @@ public class room {
         this.isDark = isDark;
     }
 
-    public void createRoom(String name, boolean hasEnemy, boolean hasLoot, boolean isLit, boolean isDark){
+    public static room createRoom(String name, boolean hasEnemy, boolean hasLoot, boolean isLit, boolean isDark){
         name = "room";
         hasEnemy = random.nextBoolean();
         hasLoot = random.nextBoolean();
@@ -63,6 +63,8 @@ public class room {
         if (!isLit){
         isDark = random.nextBoolean();
         }
+
+        return new room ("0", hasEnemy, hasLoot, isLit, isDark);
     }
 
 }
