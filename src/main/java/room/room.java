@@ -1,6 +1,9 @@
 package room;
+import java.util.Random;
 
 public class room {
+    //create randomizer
+    Random random = new Random();
     String name;
     boolean hasEnemy;
     boolean hasLoot;
@@ -50,6 +53,16 @@ public class room {
     }
     public void setIsDark (boolean isDark){
         this.isDark = isDark;
+    }
+
+    public void createRoom(String name, boolean hasEnemy, boolean hasLoot, boolean isLit, boolean isDark){
+        name = "room";
+        hasEnemy = random.nextBoolean();
+        hasLoot = random.nextBoolean();
+        isLit = random.nextBoolean();
+        if (!isLit){
+        isDark = random.nextBoolean();
+        }
     }
 
 }
