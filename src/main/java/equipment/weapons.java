@@ -35,6 +35,7 @@ public class weapons {
     }
 
     //List of available swords
+    public static weapons noWeapon = new weapons ("No weapon", 1, 0, 0, 0);
     public static weapons TrainingSword = new weapons("Training Sword", 1, 1, 1, 5);
     public static weapons RustySword = new weapons("Rusty Sword", 5, 3, 3, 15);
     public static weapons SteelSword = new weapons("Steel Sword", 15, 5, 5, 40);

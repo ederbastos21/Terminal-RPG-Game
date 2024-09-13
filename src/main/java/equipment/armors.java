@@ -35,6 +35,7 @@ public class armors {
     }
 
     //List of available armors
+    public static armors noArmor = new armors ("No Armor", 0, 0, 0, 0);
     public static armors basicClothing = new armors("Basic Clothing", 1, 1, 1, 5);
     public static armors leatherArmor = new armors("Leather Armor", 5, 3, 3, 15);
     public static armors ironArmor = new armors("Iron Armor", 15, 5, 5, 40);
